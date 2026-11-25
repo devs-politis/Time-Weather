@@ -1,0 +1,84 @@
+@font-face {
+  font-family: century-politis;
+  src: url(../font/century.ttf);
+}
+
+body {
+    background-color: #f4f4f4; 
+    font-family: century-politis, sans-serif;
+    height:100%;
+    margin:0;
+    position:relative;
+}
+html {
+    height:100%;
+    margin:0;
+}
+
+#logo {
+    width: 200px; 
+}
+
+#clock {
+    font-size: 16px;
+    margin: 0;
+    font-weight: bolder;
+    letter-spacing: 2.5px;
+}
+
+.seconds {
+    font-size: 22px;
+}
+
+#location {
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+
+.container {
+    width: 320px;
+    height: 512px;
+    max-width: 768px;
+    max-height: 512px;
+    background:black;
+    position:relative;
+    color: white;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.info-point-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.dynamic-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+video {
+    background: rgba(255, 255, 255, 0.438);
+}
+
+.icon {
+    width: 23px;
+}
+
+.info-point {
+    width: 141px;
+}
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=768, initial-scale=1">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="wrapper">
+        <div class="container"> 
+            <div class="row">
+                <div class="dynamic-content-wrapper weather">
+                    <div class="info-point-section">
+                        <img class="icon" src="img/icon.png" alt="Info Point">
+                        <img class="info-point" src="img/info-point.png" alt="Info Point">
+                    </div>
+                    <div id="weather-container">
+                        <div class="weather-container">
+                            <div class="weather-inside">
+                                <div class="temperatures">
+                                    <div id="temp-group" class="weather-row weather-group"><span id="temp"></span>°</div>
+                                </div>
+                                <div class="weather-icon">
+                                    <center><img id="weather_icon" src=""></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+
+                <div class="static-content-wrapper video">
+                    <div id="videoContainer" style="position: relative; width: 320px; height: 452px;">
+                        <video id="backgroundVideo" width="320" height="452" muted loop>
+                            <source id="videoSource" src="img/background.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <img id="fallbackImage" src="img/background-img.jpg" alt="Fallback image" style="width: 320px; height: 452px; display: none;">
+                    </div>
+                    
+                    <script>
+                        const video = document.getElementById('backgroundVideo');
+                        const source = document.getElementById('videoSource');
+                        const fallbackImage = document.getElementById('fallbackImage');
+                    
+                        // Αν αποτύχει η φόρτωση του source
+                        source.onerror = () => {
+                            video.style.display = 'none'; // Κρύψε το βίντεο
+                            fallbackImage.style.display = 'block'; // Εμφάνισε την εικόνα
+                        };
+                    </script>
+                                                      
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function BroadSignPlay() {
+            var video = document.getElementById('backgroundVideo');
+            video.play();
+        }
+
+        if (typeof BroadSignObject === 'undefined') {
+            BroadSignPlay();
+        }
+    </script>
+    <script src="js/script.js"></script>    
+</body>
+</html>

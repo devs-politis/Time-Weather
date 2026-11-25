@@ -1,0 +1,102 @@
+@font-face {
+  font-family: century-politis;
+  src: url(../font/century.ttf);
+}
+
+body {
+    background-color: #f4f4f4; 
+    font-family: century-politis, sans-serif;
+    height:100%;
+    margin:0;
+    position:relative;
+}
+html {
+    height:100%;
+    margin:0;
+}
+
+#logo {
+    width: 200px; /* Adjust as per your logo's size */
+}
+
+.temperatures {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.container {
+    width: 320px;
+    height: 512px;
+    max-width: 768px;
+    max-height: 512px;
+    background:black;
+    position:relative;
+    color: white;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+.static-content-wrapper {
+    display: flex    ;
+    justify-content: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 40px;
+}
+
+.weather-inside {
+    display: flex;
+    align-items: center;
+}
+
+.info-point-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dynamic-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+}
+
+video {
+    background: rgba(255, 255, 255, 0.438);
+}
+
+.icon {
+    width: 23px;
+}
+
+.info-point {
+    width: 141px;
+}
+
+#weather_icon {
+    height: 55px;
+    margin-right: -5px;
+}
+
+#weather-container {
+    display: flex    ;
+    justify-content: center;
+}
+
+#location {
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+
+#temp-group {
+    letter-spacing: 2px;
+}
